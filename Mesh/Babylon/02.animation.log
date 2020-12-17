@@ -1,0 +1,32 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Babylon_WebXR_Test/Mesh/Babylon/
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Rotating Ball
+		animation processing begun
+			processing action Action:  in[1 - 120], out[0 - 120]
+		processing begun of material:  Disco Ball.001
+		Custom split normals with tangents being used
+		num positions      :  1477
+		num normals        :  1477
+		num tangents       :  5908
+		num uvs            :  2954
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  540
+========= Writing of JSON file started =========
+	writing mesh:  Rotating Ball
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.0745 secs

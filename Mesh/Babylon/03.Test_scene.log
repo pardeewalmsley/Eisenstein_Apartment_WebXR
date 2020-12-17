@@ -1,0 +1,67 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Babylon_WebXR_Test/Mesh/Babylon/
+			processing env texture environment.env
+	Python World class constructor completed
+	processing begun of mesh:  Walls
+		processing begun of material:  Walls
+		Custom split normals with tangents being used
+		num positions      :  119
+		num normals        :  119
+		num tangents       :  476
+		num uvs            :  238
+		num uvs2           :  238
+		num colors         :  0
+		num triangles      :  50
+	processing begun of mesh:  Table
+		processing begun of material:  Table
+			processing texture anvil_Anvil_BaseColor
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  10607
+		num normals        :  10607
+		num tangents       :  42428
+		num uvs            :  21214
+		num uvs2           :  21214
+		num colors         :  0
+		num triangles      :  5408
+	processing begun of mesh:  Chair
+		processing begun of material:  Chair
+		Custom split normals with tangents being used
+		num positions      :  1698
+		num normals        :  1698
+		num tangents       :  6792
+		num uvs            :  3396
+		num uvs2           :  3396
+		num colors         :  0
+		num triangles      :  1194
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Floor
+		processing begun of material:  Floor
+			processing texture WoodFlooringMerbauBrickBondNatural001_COL_3K
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  104
+		num uvs            :  52
+		num uvs2           :  52
+		num colors         :  0
+		num triangles      :  20
+========= Writing of JSON file started =========
+	writing mesh:  Walls
+	writing mesh:  Table
+	writing mesh:  Chair
+	writing mesh:  Floor
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.0148 secs
