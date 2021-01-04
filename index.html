@@ -1,128 +1,136 @@
+<!-- babylon-webxr/index.html -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    <title>WebXR Apartment</title>
 
-        <title>Babylon.js sample code</title>
+    <!-- Embed latest version of Babylon.js. -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
 
-        <!-- Babylon.js -->
-        <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
-        <script src="https://preview.babylonjs.com/ammo.js"></script>
-        <script src="https://preview.babylonjs.com/cannon.js"></script>
-        <script src="https://preview.babylonjs.com/Oimo.js"></script>
-        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
-        <script src="https://preview.babylonjs.com/babylon.js"></script>
-        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
-        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
-        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
-        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
-        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
-        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
-        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+    <!-- Embed Babylon loader scripts for .gltf and other filetypes. -->
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 
-        <style>
-            html, body {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
+    <!-- Embed pep.js for consistent cross-browser pointer events. -->
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
-            #renderCanvas {
-                width: 100%;
-                height: 100%;
-                touch-action: none;
-            }
-        </style>
-    </head>
-<body>
-    <canvas id="renderCanvas"></canvas>
+    <style>
+      html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #render-canvas {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <canvas id="render-canvas"></canvas>
+
+    <!-- Our Babylon.js implementation. -->
     <script>
-        var canvas = document.getElementById("renderCanvas");
+      // Identify canvas element to script.
+      const canvas = document.getElementById('render-canvas');
 
-        var engine = null;
-        var scene = null;
-        var sceneToRender = null;
-        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
-        var createScene = function () {
+      // Initialize Babylon.js variables.
+      let engine,
+          scene,
+          sceneToRender;
+      const createDefaultEngine = function () {
+        return new BABYLON.Engine(canvas, true, {
+          preserveDrawingBuffer: true,
+          stencil: true
+        });
+      };
 
-          // Boilerplate code for setting up XR scene
-          var scene = new BABYLON.Scene(engine);
-          var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), scene);
-          camera.setTarget(BABYLON.Vector3.Zero());
-          camera.attachControl(canvas, true);
+      // Create scene and create XR experience.
+      const createScene = async function () {
 
-          var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
-          light.intensity = 1;
+        // Create a basic Babylon XR scene
+        let scene = new BABYLON.Scene(engine);
+        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(4, 5, 0), scene);
+        camera.setTarget(new BABYLON.Vector3(0, 1.5, 0));
+        camera.attachControl(canvas, true);
+        camera.speed = 0.2;
 
-            // Async call
-            BABYLON.SceneLoader.Append("Mesh/Babylon/",
-                "03.Test_scene.babylon", scene, async function  () {
-                    var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: [scene.getMeshByName("Floor")]});
-                });
+        let light = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 2, 0), scene);
+        light.intensity = 0.2;
 
-            BABYLON.SceneLoader.Append("Mesh/Babylon/", "02.animation.babylon", scene, async function  () {});
+        scene.clearColor = BABYLON.Color3.Black();
 
-            // Create spatial soundtrack, position at rotating ball object
-            var music = new BABYLON.Sound("Fluestern", "Sounds/Eisenstein_fluestern.mp3", scene, null, {
-              loop: true,
-              autoplay: true,
-              spatialSound: true,
-              distanceModel: "exponential",
-              rolloffFactor: 0.5
-            });
+        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment.babylon", scene);
 
-            music.setPosition(BABYLON.Vector3.Zero());
+        // Initialize XR experience with default experience helper.
+        const xr = await scene.createDefaultXRExperienceAsync({
+          floorMeshes: [scene.getMeshByName("Floor")]
+          });
 
-            // Create screen and set video texture
-            var screen = BABYLON.MeshBuilder.CreatePlane("screen", {width: 3.2, height: 1.8 }, scene);
-            screen.position = new BABYLON.Vector3(0, 1, -6);
-            screen.rotation.y = 3.14159;
+        // Get the features manager
+        //const fm = xr.baseExperience.featuresManager;
 
-        	  var mat = new BABYLON.StandardMaterial("mat", scene);
-
-        	  var videoTexture = new BABYLON.VideoTexture("video", "DonQuixote.webm", scene, true, true);
-
-            mat.diffuseTexture = videoTexture;
-            screen.material = mat;
-            mat.emissiveColor = new BABYLON.Color3(1,1,1);
-
-            scene.onPointerUp = function () {
-            videoTexture.video.play();
-          }
-
-            return scene;
-        };
-
-                var engine;
-                var scene;
-                initFunction = async function() {
-                    var asyncEngineCreation = async function() {
-                        try {
-                        return createDefaultEngine();
-                        } catch(e) {
-                        console.log("the available createEngine function failed. Creating the default engine instead");
-                        return createDefaultEngine();
-                        }
-                    }
-
-                    engine = await asyncEngineCreation();
-        if (!engine) throw 'engine should not be null.';
-        scene = createScene();};
-        initFunction().then(() => {sceneToRender = scene
-            engine.runRenderLoop(function () {
-                if (sceneToRender && sceneToRender.activeCamera) {
-                    sceneToRender.render();
-                }
-            });
+        /* Create spatial soundtrack, position at rotating ball object
+        var music = new BABYLON.Sound("Fluestern", "Sounds/Eisenstein_fluestern.mp3", scene, null, {
+          loop: true,
+          autoplay: true,
+          spatialSound: true,
+          distanceModel: "exponential",
+          rolloffFactor: 0.5
         });
 
-        // Resize
-        window.addEventListener("resize", function () {
-            engine.resize();
-        });
+        music.setPosition(BABYLON.Vector3.Zero());*/
+
+        /* Create screen and set video texture
+        var screen = BABYLON.MeshBuilder.CreatePlane("screen", {width: 3.2, height: 1.8 }, scene);
+        screen.position = new BABYLON.Vector3(0, 1, -6);
+        screen.rotation.y = 3.14159;
+
+        var mat = new BABYLON.StandardMaterial("mat", scene);
+
+        var videoTexture = new BABYLON.VideoTexture("video", "DonQuixote.webm", scene, true, true);
+
+        mat.diffuseTexture = videoTexture;
+        screen.material = mat;
+        mat.emissiveColor = new BABYLON.Color3(1,1,1);
+
+        scene.onPointerUp = function () {
+        videoTexture.video.play();
+      }*/
+
+
+        return scene;
+      };
+
+      // Create engine.
+      engine = createDefaultEngine();
+      if (!engine) {
+        throw 'Engine should not be null';
+      }
+
+      // Create scene.
+      scene = createScene();
+      scene.then(function (returnedScene) {
+        sceneToRender = returnedScene;
+      });
+
+      // Run render loop to render future frames.
+      engine.runRenderLoop(function () {
+        if (sceneToRender) {
+          sceneToRender.render();
+        }
+      });
+
+      // Handle browser resize.
+      window.addEventListener('resize', function () {
+        engine.resize();
+      });
+
     </script>
-</body>
+  </body>
 </html>

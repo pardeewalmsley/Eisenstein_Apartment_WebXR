@@ -1,0 +1,343 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Eisenstein/Babylon_WebXR/Mesh/Babylon/
+			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Floor
+		WARNING: No materials have been assigned: 
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer6
+		processing begun of material:  WandA_Layer6
+			processing texture Wand_A_Layer6_BG1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandB_Layer6
+		processing begun of material:  WandB_Layer6
+			processing texture Wand_B_Layer6_BG1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandC_Layer6
+		processing begun of material:  WandC_Layer6
+			processing texture Wand_C_Layer6_BG
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandD_Layer6
+		processing begun of material:  WandD_Layer6
+			processing texture Wand_D_Layer6_BG
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer5
+		processing begun of material:  WandA_Layer5
+			processing texture Wand_A_Layer5
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer4
+		processing begun of material:  WandA_Layer4
+			processing texture Wand_A_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer3
+		processing begun of material:  WandA_Layer3
+			processing texture Wand_A_Layer3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer2
+		processing begun of material:  WandA_Layer2
+			processing texture Wand_A_Layer2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandA_Layer1
+		processing begun of material:  WandA_Layer1
+			processing texture Wand_A_Layer1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  WandA
+	processing begun of mesh:  WandB_Layer5
+		processing begun of material:  WandB_Layer5
+			processing texture Wand_B_Layer5
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandB_Layer4
+		processing begun of material:  WandB_Layer4
+			processing texture Wand_B_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandB_Layer3
+		processing begun of material:  WandB_Layer3
+			processing texture Wand_B_Layer3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandB_Layer2
+		processing begun of material:  WandB_Layer2
+			processing texture Wand_B_Layer2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandB_Layer1
+		processing begun of material:  WandB_Layer1
+			processing texture Wand_B_Layer1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  WandB
+	processing begun of mesh:  WandC_Layer5
+		processing begun of material:  WandC_Layer5
+			processing texture Wand_C_Layer5
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandC_Layer4
+		processing begun of material:  WandC_Layer4
+			processing texture Wand_C_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandC_Layer3
+		processing begun of material:  WandC_Layer3
+			processing texture Wand_C_Layer3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandC_Layer2
+		processing begun of material:  WandC_Layer2
+			processing texture Wand_C_Layer2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandC_Layer1
+		processing begun of material:  WandC_Layer1
+			processing texture Wand_C_Layer1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  WandC
+	processing begun of mesh:  WandD_Layer5
+		processing begun of material:  WandD_Layer5
+			processing texture Wand_D_Layer5
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandD_Layer4
+		processing begun of material:  WandD_Layer4
+			processing texture Wand_D_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandD_Layer3
+		processing begun of material:  WandD_Layer3
+			processing texture Wand_D_Layer3
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandD_Layer2
+		processing begun of material:  WandD_Layer2
+			processing texture Wand_D_Layer2
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  WandD_Layer1
+		processing begun of material:  WandD_Layer1
+			processing texture Wand_D_Layer1
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of node:  WandD
+	processing begun of mesh:  Table
+		processing begun of material:  lambert1
+		Custom split normals with tangents being used
+		num positions      :  11213
+		num normals        :  11213
+		num tangents       :  44852
+		num uvs            :  22426
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5408
+	processing begun of mesh:  pCube5
+		processing begun of material:  lambert1.001
+		Custom split normals with tangents being used
+		num positions      :  1758
+		num normals        :  1758
+		num tangents       :  7032
+		num uvs            :  3516
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1194
+========= Writing of JSON file started =========
+	writing mesh:  Floor
+	writing mesh:  WandA_Layer6
+	writing mesh:  WandB_Layer6
+	writing mesh:  WandC_Layer6
+	writing mesh:  WandD_Layer6
+	writing mesh:  WandA_Layer5
+	writing mesh:  WandA_Layer4
+	writing mesh:  WandA_Layer3
+	writing mesh:  WandA_Layer2
+	writing mesh:  WandA_Layer1
+	writing mesh:  WandB_Layer5
+	writing mesh:  WandB_Layer4
+	writing mesh:  WandB_Layer3
+	writing mesh:  WandB_Layer2
+	writing mesh:  WandB_Layer1
+	writing mesh:  WandC_Layer5
+	writing mesh:  WandC_Layer4
+	writing mesh:  WandC_Layer3
+	writing mesh:  WandC_Layer2
+	writing mesh:  WandC_Layer1
+	writing mesh:  WandD_Layer5
+	writing mesh:  WandD_Layer4
+	writing mesh:  WandD_Layer3
+	writing mesh:  WandD_Layer2
+	writing mesh:  WandD_Layer1
+	writing mesh:  Table
+	writing mesh:  pCube5
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.8914 secs
