@@ -1,6 +1,6 @@
 # Eisenstein_Apartment_WebXR
 
-Link:  https://pardeewalmsley.github.io/Babylon_WebXR_Test/
+Link:  https://pardeewalmsley.github.io/Eisenstein_Apartment_WebXR/
 
 This project is set up in order to test the capabilities of Babylon JS as a framework for creating a high-quality interactive WebXR experience.
 
