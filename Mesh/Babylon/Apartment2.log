@@ -1,0 +1,97 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Eisenstein/Babylon_WebXR/Mesh/Babylon/
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  Wand_A
+		processing begun of material:  Wand_A
+			WARNING: unsupported node type(ShaderNodeMixRGB) will trigger baking
+			processing texture Wand_A_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Wand_A_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 2.1364 secs
+		num positions      :  1695
+		num normals        :  1695
+		num tangents       :  0
+		num uvs            :  3390
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  830
+		WARNING: # of 0 area faces found:  116
+	processing begun of mesh:  Wand_B
+		processing begun of material:  Wand_B
+			WARNING: unsupported node type(ShaderNodeMixRGB) will trigger baking
+			processing texture Wand_B_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Wand_B_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 2.0938 secs
+		num positions      :  770
+		num normals        :  770
+		num tangents       :  0
+		num uvs            :  1540
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  350
+	processing begun of mesh:  Wand_C
+		processing begun of material:  Wand_C
+			WARNING: unsupported node type(ShaderNodeMixRGB) will trigger baking
+			processing texture Wand_C_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Wand_C_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 2.0467 secs
+		num positions      :  644
+		num normals        :  644
+		num tangents       :  0
+		num uvs            :  1288
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  286
+	processing begun of mesh:  Wand_D
+		processing begun of material:  Wand_D
+			WARNING: unsupported node type(ShaderNodeMixRGB) will trigger baking
+			processing texture Wand_D_Layer4
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			Baking texture, type: DIFFUSE, mapped using: UVMap
+			processing texture Wand_D_baked_DIFFUSE
+				texture type:  diffuseTexture, mapped using: "UVMap"
+			bake time:  0 min, 2.0043 secs
+		num positions      :  665
+		num normals        :  665
+		num tangents       :  0
+		num uvs            :  1330
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  295
+	processing begun of mesh:  Floor
+		processing begun of material:  Floor
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+========= Writing of JSON file started =========
+	writing mesh:  Wand_A
+	writing mesh:  Wand_B
+	writing mesh:  Wand_C
+	writing mesh:  Wand_D
+	writing mesh:  Floor
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 8.4141 secs

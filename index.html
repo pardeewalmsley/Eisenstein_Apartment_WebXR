@@ -55,17 +55,22 @@
 
         // Create a basic Babylon XR scene
         let scene = new BABYLON.Scene(engine);
-        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(4, 5, 0), scene);
-        camera.setTarget(new BABYLON.Vector3(0, 1.5, 0));
+        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(2, 2, 0), scene);
+        camera.setTarget(new BABYLON.Vector3(-1, 2, 0));
         camera.attachControl(canvas, true);
         camera.speed = 0.2;
 
-        let light = new BABYLON.HemisphericLight("HemiLight", new BABYLON.Vector3(0, 2, 0), scene);
-        light.intensity = 0.2;
+        let light = new BABYLON.PointLight("HemiLight", new BABYLON.Vector3(0, 2, 0), scene);
+        light.intensity = 10;
+        light.diffuse = new BABYLON.Color3(0.5, 0.97, 1);
 
         scene.clearColor = BABYLON.Color3.Black();
 
-        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment.babylon", scene);
+        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene);
+        /*BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "02.animation.babylon", scene, function() {
+          var DonQuixote = scene.getMeshByName("Don Quixote");
+          DonQuixote.material.albedoColor = new BABYLON.Color3(0,0,1);
+        });*/
 
         // Initialize XR experience with default experience helper.
         const xr = await scene.createDefaultXRExperienceAsync({

@@ -9,24 +9,140 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Babylon_WebXR_Test/Mesh/Babylon/
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Eisenstein/Babylon_WebXR/Mesh/Babylon/
 	Python World class constructor completed
 	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
-	processing begun of camera (UniversalCamera):  Camera
-	processing begun of mesh:  Rotating Ball
-		animation processing begun
-			processing action Action:  in[1 - 120], out[0 - 120]
-		processing begun of material:  Disco Ball.001
-		Custom split normals with tangents being used
-		num positions      :  1477
-		num normals        :  1477
-		num tangents       :  5908
-		num uvs            :  2954
+	processing begun of mesh:  Sphere
+		WARNING: No materials have been assigned: 
+		num positions      :  2595
+		num normals        :  2595
+		num tangents       :  0
+		num uvs            :  5190
 		num uvs2           :  0
 		num colors         :  0
-		num triangles      :  540
+		num triangles      :  960
+	processing begun of mesh:  Childhood in Riga
+		animation processing begun
+			processing action Childhood in RigaAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Childhood in Riga
+		num positions      :  2426
+		num normals        :  2426
+		num tangents       :  0
+		num uvs            :  4852
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1281
+	processing begun of mesh:  Mise en scene
+		animation processing begun
+			processing action Mise en sceneAction.004:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Mise en scene
+		num positions      :  1423
+		num normals        :  1423
+		num tangents       :  0
+		num uvs            :  2846
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  927
+	processing begun of mesh:  Socratic method
+		animation processing begun
+			processing action Socratic methodAction.001:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Socratic method
+		num positions      :  1601
+		num normals        :  1601
+		num tangents       :  0
+		num uvs            :  3202
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1228
+	processing begun of mesh:  Edgar Degas
+		animation processing begun
+			processing action Edgar DegasAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Edgar Degas
+		num positions      :  2205
+		num normals        :  2205
+		num tangents       :  0
+		num uvs            :  4410
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1290
+	processing begun of mesh:  Don Quixote
+		animation processing begun
+			processing action Don QuixoteAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Don Quixote
+		num positions      :  1363
+		num normals        :  1363
+		num tangents       :  0
+		num uvs            :  2726
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  692
+	processing begun of mesh:  Jacques Callot
+		animation processing begun
+			processing action Jacques CallotAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Jacques Callot
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  0
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1098
+	processing begun of mesh:  Honoré Daumier
+		animation processing begun
+			processing action Honoré DaumierAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Honore Daumier
+		num positions      :  1399
+		num normals        :  1399
+		num tangents       :  0
+		num uvs            :  2798
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  998
+	processing begun of mesh:  Depth of field
+		animation processing begun
+			processing action Depth of fieldAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Depth of Field
+		num positions      :  1602
+		num normals        :  1602
+		num tangents       :  0
+		num uvs            :  3204
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  781
+	processing begun of mesh:  Theatre
+		animation processing begun
+			processing action Text.003Action:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Theatre
+		num positions      :  1318
+		num normals        :  1318
+		num tangents       :  0
+		num uvs            :  2636
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  542
+	processing begun of mesh:  Vsevolod Meyerhold
+		animation processing begun
+			processing action Vsevolod MeyerholdAction:  in[0 - 240], out[0 - 240]
+		processing begun of material:  Vsevolod Meyerhold
+		num positions      :  1484
+		num normals        :  1484
+		num tangents       :  0
+		num uvs            :  2968
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1014
 ========= Writing of JSON file started =========
-	writing mesh:  Rotating Ball
+	writing mesh:  Sphere
+	writing mesh:  Childhood in Riga
+	writing mesh:  Mise en scene
+	writing mesh:  Socratic method
+	writing mesh:  Edgar Degas
+	writing mesh:  Don Quixote
+	writing mesh:  Jacques Callot
+	writing mesh:  Honoré Daumier
+	writing mesh:  Depth of field
+	writing mesh:  Theatre
+	writing mesh:  Vsevolod Meyerhold
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 0.0745 secs
+elapsed time:  0 min, 0.6684 secs
