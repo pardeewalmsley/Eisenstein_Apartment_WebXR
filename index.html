@@ -60,13 +60,45 @@
         camera.attachControl(canvas, true);
         camera.speed = 0.2;
 
-        let light = new BABYLON.PointLight("HemiLight", new BABYLON.Vector3(0, 2, 0), scene);
-        light.intensity = 10;
-        light.diffuse = new BABYLON.Color3(0.5, 0.97, 1);
+        let light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, 1, 0), scene);
+        light.intensity = 5;
+        light.diffuse = new BABYLON.Color3(0.8, 0.97, 1);
 
-        scene.clearColor = BABYLON.Color3.Black();
+        //scene.clearColor = BABYLON.Color3.Black();
+        // Fog
+        scene.fogMode = BABYLON.Scene.FOGMODE_EXP;
+        //BABYLON.Scene.FOGMODE_NONE;
+        //BABYLON.Scene.FOGMODE_EXP;
+        //BABYLON.Scene.FOGMODE_EXP2;
+        //BABYLON.Scene.FOGMODE_LINEAR;
 
-        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene);
+        scene.fogColor = new BABYLON.Color3(0.9, 0.9, 0.85);
+        //scene.fogDensity = 0.01;
+
+        // Skybox
+        var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, scene);
+        var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
+        skyboxMaterial.backFaceCulling = false;
+        skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Textures/skybox/skybox", scene);
+        skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+        skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+        skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+        skyboxMaterial.disableLighting = true;
+        skybox.material = skyboxMaterial;
+
+        //BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene);
+        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene, function() {
+          var WandA = scene.getMeshByName("Wand_A");
+          var WandB = scene.getMeshByName("Wand_B");
+          var WandC = scene.getMeshByName("Wand_C");
+          var WandD = scene.getMeshByName("Wand_D");
+          BABYLON.NodeMaterial.ParseFromSnippetAsync("7RY08Z#10", scene).then(nodeMaterial => {
+            WandA.material = nodeMaterial;
+            WandB.material = nodeMaterial;
+            WandC.material = nodeMaterial;
+            WandD.material = nodeMaterial;
+          });
+        });
         /*BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "02.animation.babylon", scene, function() {
           var DonQuixote = scene.getMeshByName("Don Quixote");
           DonQuixote.material.albedoColor = new BABYLON.Color3(0,0,1);
@@ -108,6 +140,7 @@
         videoTexture.video.play();
       }*/
 
+      //scene.debugLayer.show();
 
         return scene;
       };
