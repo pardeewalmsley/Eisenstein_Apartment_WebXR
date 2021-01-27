@@ -10,8 +10,13 @@
     <!-- Embed Babylon loader scripts for .gltf and other filetypes. -->
     <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 
+    <script src="babylon.gridMaterial.min.js"></script>
+
     <!-- Embed pep.js for consistent cross-browser pointer events. -->
     <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
 
     <style>
       html, body {
@@ -27,14 +32,52 @@
         height: 100%;
         touch-action: none;
       }
+      #UIText{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: rgba(0,0,0,0.6);
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        text-align: center;
+        font-size: 30pt;
+        letter-spacing: 2vw;
+      }
+      #buttonContainer{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.6);
+      }
+      #button{
+        flex-grow: 1;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        font-size: 20pt;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      #button:hover{
+        background-color: rgba(255,255,255,0.6);
+        color: black;
+      }
     </style>
 
   </head>
 
   <body>
     <canvas id="render-canvas"></canvas>
+    <h1 id="UIText">The Eisenstein Apartment</h1>
 
-    <!-- Our Babylon.js implementation. -->
     <script>
       // Identify canvas element to script.
       const canvas = document.getElementById('render-canvas');
@@ -55,92 +98,189 @@
 
         // Create a basic Babylon XR scene
         let scene = new BABYLON.Scene(engine);
-        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(2, 2, 0), scene);
+        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(1, 2, 0), scene);
         camera.setTarget(new BABYLON.Vector3(-1, 2, 0));
         camera.attachControl(canvas, true);
         camera.speed = 0.2;
+        camera.minZ = 0.1;
 
-        let light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, 1, 0), scene);
-        light.intensity = 5;
+        let light = new BABYLON.PointLight("PointLight", new BABYLON.Vector3(0, 3, 0), scene);
+        light.intensity = 20;
         light.diffuse = new BABYLON.Color3(0.8, 0.97, 1);
 
-        //scene.clearColor = BABYLON.Color3.Black();
-        // Fog
-        scene.fogMode = BABYLON.Scene.FOGMODE_EXP;
-        //BABYLON.Scene.FOGMODE_NONE;
-        //BABYLON.Scene.FOGMODE_EXP;
-        //BABYLON.Scene.FOGMODE_EXP2;
-        //BABYLON.Scene.FOGMODE_LINEAR;
+        scene.clearColor = BABYLON.Color3.Black();
 
-        scene.fogColor = new BABYLON.Color3(0.9, 0.9, 0.85);
-        //scene.fogDensity = 0.01;
+        // Ground
+        const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 50, height: 50, subdivisions: 10}, scene);
+        var groundMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
+      	groundMaterial.majorUnitFrequency = 5;
+      	groundMaterial.minorUnitVisibility = 0.45;
+      	groundMaterial.gridRatio = 2;
+      	groundMaterial.backFaceCulling = false;
+      	groundMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.2);
+      	groundMaterial.lineColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+      	groundMaterial.opacity = 0.98;
+	      ground.material = groundMaterial;
 
-        // Skybox
-        var skybox = BABYLON.Mesh.CreateBox("skyBox", 100.0, scene);
-        var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
-        skyboxMaterial.backFaceCulling = false;
-        skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("Textures/skybox/skybox", scene);
-        skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
-        skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
-        skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
-        skyboxMaterial.disableLighting = true;
-        skybox.material = skyboxMaterial;
+        // Create button container to hold radio buttons
 
-        //BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene);
-        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene, function() {
-          var WandA = scene.getMeshByName("Wand_A");
-          var WandB = scene.getMeshByName("Wand_B");
-          var WandC = scene.getMeshByName("Wand_C");
-          var WandD = scene.getMeshByName("Wand_D");
-          BABYLON.NodeMaterial.ParseFromSnippetAsync("7RY08Z#10", scene).then(nodeMaterial => {
-            WandA.material = nodeMaterial;
-            WandB.material = nodeMaterial;
-            WandC.material = nodeMaterial;
-            WandD.material = nodeMaterial;
+        var buttonContainer = document.createElement('div');
+        buttonContainer.id = "buttonContainer";
+        document.body.appendChild(buttonContainer);
+
+        // Import meshes and set buttons
+
+        BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment.babylon", scene, function(apartmentOne) {
+
+          BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment2.babylon", scene, function(apartmentTwo) {
+
+            BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment3.babylon", scene, function(apartmentThree) {
+
+              BABYLON.NodeMaterial.ParseFromSnippetAsync("7RY08Z#28", scene).then(nodeMaterial => {
+                for (mesh of apartmentThree)
+                  mesh.material = nodeMaterial;
+              });
+
+                BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment4.babylon", scene, function(apartmentFour) {
+
+                var wallPoints;
+                var waende = scene.getMeshByName("Waende");
+
+                var pcs= new BABYLON.PointsCloudSystem("pcs", 5, scene)
+
+                pcs.initParticles = function() {
+                    for (var p = 0; p < pcs.nbParticles; p++) {
+                      var c = BABYLON.Scalar.RandomRange(0.5, 1);
+                      pcs.particles[p].color = new BABYLON.Color4(c, c, c, 1);
+                    }
+                }
+
+                pcs.addSurfacePoints(waende, 100000, BABYLON.PointColor.Stated);
+                pcs.buildMeshAsync().then((mesh) => {
+                  mesh.material.pointSize = 2;
+                  waende.dispose();
+                  pcs.mesh.visibility = 0;
+                  wallPoints = pcs;
+                  pcs.initParticles();
+                  pcs.setParticles();
+                });
+
+                for (mesh of apartmentTwo)
+                  mesh.setEnabled(false);
+
+                for (mesh of apartmentThree)
+                  mesh.setEnabled(false);
+
+                var toggleOne = document.createElement('button');
+                toggleOne.id = "button";
+                toggleOne.textContent = "1. Parallax";
+                buttonContainer.appendChild(toggleOne);
+                toggleOne.onclick = function() {
+                    for (mesh of apartmentOne)
+                        mesh.setEnabled(true);
+                    for (mesh of apartmentTwo)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentThree)
+                      mesh.setEnabled(false);
+                    wallPoints.mesh.visibility = 0;
+                }
+
+                var toggleTwo = document.createElement('button');
+                toggleTwo.id = "button";
+                toggleTwo.textContent = "2. Sketch as texture";
+                buttonContainer.appendChild(toggleTwo);
+                toggleTwo.onclick = function() {
+                    for (mesh of apartmentOne)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentTwo)
+                        mesh.setEnabled(true);
+                    for (mesh of apartmentThree)
+                      mesh.setEnabled(false);
+                    wallPoints.mesh.visibility = 0;
+                }
+
+                var toggleThree = document.createElement('button');
+                toggleThree.id = "button";
+                toggleThree.textContent = "3. Toon shader";
+                buttonContainer.appendChild(toggleThree);
+                toggleThree.onclick = function() {
+                    for (mesh of apartmentOne)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentTwo)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentThree)
+                        mesh.setEnabled(true);
+                    wallPoints.mesh.visibility = 0;
+                }
+
+                var toggleFour = document.createElement('button');
+                toggleFour.id = "button";
+                toggleFour.textContent = "4. Point Cloud";
+                buttonContainer.appendChild(toggleFour);
+                toggleFour.onclick = function() {
+                    for (mesh of apartmentOne)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentTwo)
+                      mesh.setEnabled(false);
+                    for (mesh of apartmentThree)
+                        mesh.setEnabled(false);
+                    wallPoints.mesh.visibility = 1;
+                }
+
+              });
+            });
           });
         });
-        /*BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "02.animation.babylon", scene, function() {
-          var DonQuixote = scene.getMeshByName("Don Quixote");
-          DonQuixote.material.albedoColor = new BABYLON.Color3(0,0,1);
-        });*/
 
-        // Initialize XR experience with default experience helper.
+        /* Initialize XR experience with default experience helper.
         const xr = await scene.createDefaultXRExperienceAsync({
           floorMeshes: [scene.getMeshByName("Floor")]
-          });
+        });*/
 
         // Get the features manager
         //const fm = xr.baseExperience.featuresManager;
 
-        /* Create spatial soundtrack, position at rotating ball object
-        var music = new BABYLON.Sound("Fluestern", "Sounds/Eisenstein_fluestern.mp3", scene, null, {
-          loop: true,
-          autoplay: true,
-          spatialSound: true,
-          distanceModel: "exponential",
-          rolloffFactor: 0.5
-        });
+        // Dust particle system
+        const particleSystem = new BABYLON.ParticleSystem("particles", 2000);
+        particleSystem.particleTexture = new BABYLON.Texture("Textures/dust_particle.png");
+        particleSystem.emitter = new BABYLON.Vector3(0, 0, 0);
+        particleSystem.minEmitBox = new BABYLON.Vector3(-5, 1, -5);
+        particleSystem.maxEmitBox = new BABYLON.Vector3(5, 5, 5);
+        particleSystem.preWarmCycles = 100;
+        particleSystem.gravity = new BABYLON.Vector3(0, 0, 0);
 
-        music.setPosition(BABYLON.Vector3.Zero());*/
+        // Particle size
+        particleSystem.minSize = 0.03;
+        particleSystem.maxSize = 0.07;
 
-        /* Create screen and set video texture
-        var screen = BABYLON.MeshBuilder.CreatePlane("screen", {width: 3.2, height: 1.8 }, scene);
-        screen.position = new BABYLON.Vector3(0, 1, -6);
-        screen.rotation.y = 3.14159;
+        // Angular speed, in radians
+        particleSystem.minAngularSpeed = -0.4;
+        particleSystem.maxAngularSpeed = 0.4;
 
-        var mat = new BABYLON.StandardMaterial("mat", scene);
+        // Speed
+        particleSystem.minEmitPower = 0;
+        particleSystem.maxEmitPower = 0.1;
+        particleSystem.updateSpeed = 0.002;
 
-        var videoTexture = new BABYLON.VideoTexture("video", "DonQuixote.webm", scene, true, true);
+        // Color gradient over time
+        particleSystem.addColorGradient(0, new BABYLON.Color4(1, 1, 0.9, 0.0));
+        particleSystem.addColorGradient(0.4, new BABYLON.Color4(1, 1, 0.7, 0.3));
+        particleSystem.addColorGradient(0.5, new BABYLON.Color4(1, 1, 0.4, 0.3));
+        particleSystem.addColorGradient(1.0, new BABYLON.Color4(1, 1, 0.9, 0.0));
 
-        mat.diffuseTexture = videoTexture;
-        screen.material = mat;
-        mat.emissiveColor = new BABYLON.Color3(1,1,1);
+        // Noise
+        var noiseTexture = new BABYLON.NoiseProceduralTexture("perlin", 256, scene);
+        noiseTexture.animationSpeedFactor = 2;
+        noiseTexture.persistence = 2;
+        noiseTexture.brightness = 0.5;
+        noiseTexture.octaves = 3;
 
-        scene.onPointerUp = function () {
-        videoTexture.video.play();
-      }*/
+        particleSystem.noiseTexture = noiseTexture;
+        particleSystem.noiseStrength = new BABYLON.Vector3(10, 10, 10);
 
-      //scene.debugLayer.show();
+        particleSystem.start();
+
+        //scene.debugLayer.show();
 
         return scene;
       };

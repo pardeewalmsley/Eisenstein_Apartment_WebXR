@@ -13,15 +13,6 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
 	Python World class constructor completed
 	processing begun of camera (UniversalCamera):  Camera
-	processing begun of mesh:  Floor
-		WARNING: No materials have been assigned: 
-		num positions      :  4
-		num normals        :  4
-		num tangents       :  0
-		num uvs            :  8
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  2
 	processing begun of mesh:  WandA_Layer6
 		processing begun of material:  WandA_Layer6
 			processing texture Wand_A_Layer6_BG1
@@ -290,28 +281,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num colors         :  0
 		num triangles      :  2
 	processing begun of node:  WandD
-	processing begun of mesh:  Table
-		processing begun of material:  lambert1
-		Custom split normals with tangents being used
-		num positions      :  11213
-		num normals        :  11213
-		num tangents       :  44852
-		num uvs            :  22426
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  5408
-	processing begun of mesh:  pCube5
-		processing begun of material:  lambert1.001
-		Custom split normals with tangents being used
-		num positions      :  1758
-		num normals        :  1758
-		num tangents       :  7032
-		num uvs            :  3516
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  1194
 ========= Writing of JSON file started =========
-	writing mesh:  Floor
 	writing mesh:  WandA_Layer6
 	writing mesh:  WandB_Layer6
 	writing mesh:  WandC_Layer6
@@ -336,8 +306,6 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  WandD_Layer3
 	writing mesh:  WandD_Layer2
 	writing mesh:  WandD_Layer1
-	writing mesh:  Table
-	writing mesh:  pCube5
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 1.3598 secs
+elapsed time:  0 min, 0.1385 secs
