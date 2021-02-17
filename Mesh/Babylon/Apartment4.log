@@ -15,10 +15,10 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
 	processing begun of mesh:  Waende
 		processing begun of material:  Babylon shader
-		num positions      :  3799
-		num normals        :  3799
+		num positions      :  3792
+		num normals        :  3792
 		num tangents       :  0
-		num uvs            :  7598
+		num uvs            :  7584
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  1761
@@ -27,4 +27,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  Waende
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 0.1556 secs
+elapsed time:  0 min, 0.1058 secs

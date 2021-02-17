@@ -12,7 +12,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Eisenstein/Babylon_WebXR/Mesh/Babylon/
 			WARNING: unsupported node type(ShaderNodeRGB) will trigger baking
 	Python World class constructor completed
-	processing begun of camera (UniversalCamera):  Camera
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
 	processing begun of mesh:  WandA_Layer6
 		processing begun of material:  WandA_Layer6
 			processing texture Wand_A_Layer6_BG1
@@ -308,4 +308,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  WandD_Layer1
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 0.1385 secs
+elapsed time:  0 min, 0.1669 secs

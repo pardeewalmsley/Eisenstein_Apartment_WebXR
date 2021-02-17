@@ -98,14 +98,14 @@
 
         // Create a basic Babylon XR scene
         let scene = new BABYLON.Scene(engine);
-        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(1, 2, 0), scene);
+        let camera = new BABYLON.UniversalCamera('camera-1', new BABYLON.Vector3(0, 1.5, 0), scene);
         camera.setTarget(new BABYLON.Vector3(-1, 2, 0));
         camera.attachControl(canvas, true);
         camera.speed = 0.2;
         camera.minZ = 0.1;
 
-        let light = new BABYLON.PointLight("PointLight", new BABYLON.Vector3(0, 3, 0), scene);
-        light.intensity = 20;
+        let light = new BABYLON.PointLight("PointLight", new BABYLON.Vector3(0, 2, 0), scene);
+        light.intensity = 10;
         light.diffuse = new BABYLON.Color3(0.8, 0.97, 1);
 
         scene.clearColor = BABYLON.Color3.Black();
@@ -165,68 +165,97 @@
                   pcs.setParticles();
                 });
 
-                for (mesh of apartmentTwo)
-                  mesh.setEnabled(false);
+                BABYLON.SceneLoader.ImportMesh("", "Mesh/Babylon/", "Apartment5.babylon", scene, function(apartmentFive) {
 
-                for (mesh of apartmentThree)
-                  mesh.setEnabled(false);
-
-                var toggleOne = document.createElement('button');
-                toggleOne.id = "button";
-                toggleOne.textContent = "1. Parallax";
-                buttonContainer.appendChild(toggleOne);
-                toggleOne.onclick = function() {
-                    for (mesh of apartmentOne)
-                        mesh.setEnabled(true);
                     for (mesh of apartmentTwo)
                       mesh.setEnabled(false);
+
                     for (mesh of apartmentThree)
                       mesh.setEnabled(false);
-                    wallPoints.mesh.visibility = 0;
-                }
 
-                var toggleTwo = document.createElement('button');
-                toggleTwo.id = "button";
-                toggleTwo.textContent = "2. Sketch as texture";
-                buttonContainer.appendChild(toggleTwo);
-                toggleTwo.onclick = function() {
-                    for (mesh of apartmentOne)
+                    for (mesh of apartmentFive)
                       mesh.setEnabled(false);
-                    for (mesh of apartmentTwo)
-                        mesh.setEnabled(true);
-                    for (mesh of apartmentThree)
-                      mesh.setEnabled(false);
-                    wallPoints.mesh.visibility = 0;
-                }
 
-                var toggleThree = document.createElement('button');
-                toggleThree.id = "button";
-                toggleThree.textContent = "3. Toon shader";
-                buttonContainer.appendChild(toggleThree);
-                toggleThree.onclick = function() {
-                    for (mesh of apartmentOne)
-                      mesh.setEnabled(false);
-                    for (mesh of apartmentTwo)
-                      mesh.setEnabled(false);
-                    for (mesh of apartmentThree)
-                        mesh.setEnabled(true);
-                    wallPoints.mesh.visibility = 0;
-                }
+                    var toggleOne = document.createElement('button');
+                    toggleOne.id = "button";
+                    toggleOne.textContent = "1. Parallax";
+                    buttonContainer.appendChild(toggleOne);
+                    toggleOne.onclick = function() {
+                        for (mesh of apartmentOne)
+                            mesh.setEnabled(true);
+                        for (mesh of apartmentTwo)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentThree)
+                          mesh.setEnabled(false);
+                        wallPoints.mesh.visibility = 0;
+                        for (mesh of apartmentFive)
+                            mesh.setEnabled(false);
+                    }
 
-                var toggleFour = document.createElement('button');
-                toggleFour.id = "button";
-                toggleFour.textContent = "4. Point Cloud";
-                buttonContainer.appendChild(toggleFour);
-                toggleFour.onclick = function() {
-                    for (mesh of apartmentOne)
-                      mesh.setEnabled(false);
-                    for (mesh of apartmentTwo)
-                      mesh.setEnabled(false);
-                    for (mesh of apartmentThree)
-                        mesh.setEnabled(false);
-                    wallPoints.mesh.visibility = 1;
-                }
+                    var toggleTwo = document.createElement('button');
+                    toggleTwo.id = "button";
+                    toggleTwo.textContent = "2. Sketch as texture";
+                    buttonContainer.appendChild(toggleTwo);
+                    toggleTwo.onclick = function() {
+                        for (mesh of apartmentOne)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentTwo)
+                            mesh.setEnabled(true);
+                        for (mesh of apartmentThree)
+                          mesh.setEnabled(false);
+                        wallPoints.mesh.visibility = 0;
+                        for (mesh of apartmentFive)
+                            mesh.setEnabled(false);
+                    }
 
+                    var toggleThree = document.createElement('button');
+                    toggleThree.id = "button";
+                    toggleThree.textContent = "3. Toon shader";
+                    buttonContainer.appendChild(toggleThree);
+                    toggleThree.onclick = function() {
+                        for (mesh of apartmentOne)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentTwo)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentThree)
+                            mesh.setEnabled(true);
+                        wallPoints.mesh.visibility = 0;
+                        for (mesh of apartmentFive)
+                            mesh.setEnabled(false);
+                    }
+
+                    var toggleFour = document.createElement('button');
+                    toggleFour.id = "button";
+                    toggleFour.textContent = "4. Point Cloud";
+                    buttonContainer.appendChild(toggleFour);
+                    toggleFour.onclick = function() {
+                        for (mesh of apartmentOne)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentTwo)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentThree)
+                            mesh.setEnabled(false);
+                        wallPoints.mesh.visibility = 1;
+                        for (mesh of apartmentFive)
+                            mesh.setEnabled(false);
+                    }
+
+                    var toggleFive = document.createElement('button');
+                    toggleFive.id = "button";
+                    toggleFive.textContent = "5. Old film";
+                    buttonContainer.appendChild(toggleFive);
+                    toggleFive.onclick = function() {
+                        for (mesh of apartmentOne)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentTwo)
+                          mesh.setEnabled(false);
+                        for (mesh of apartmentThree)
+                            mesh.setEnabled(false);
+                        wallPoints.mesh.visibility = 0;
+                        for (mesh of apartmentFive)
+                            mesh.setEnabled(true);
+                    }
+                });
               });
             });
           });

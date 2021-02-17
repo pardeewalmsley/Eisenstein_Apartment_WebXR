@@ -1,0 +1,418 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/alexanderwalmsley/Documents/Design_Development/Eisenstein/Babylon_WebXR/Mesh/Babylon/
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Floor
+		processing begun of material:  Architecture
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  0
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  Doorway_2
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  408
+		num normals        :  408
+		num tangents       :  0
+		num uvs            :  816
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  Doorway_1
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  95
+		num normals        :  95
+		num tangents       :  0
+		num uvs            :  190
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  Chair_1
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		Custom split normals with tangents being used
+		num positions      :  1758
+		num normals        :  1758
+		num tangents       :  7032
+		num uvs            :  3516
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1194
+	processing begun of mesh:  Sideboard
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  0
+		num uvs            :  310
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  72
+	processing begun of mesh:  Rug
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  408
+		num normals        :  408
+		num tangents       :  0
+		num uvs            :  816
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  736
+	processing begun of mesh:  Chair_2
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		Custom split normals with tangents being used
+		num positions      :  1758
+		num normals        :  1758
+		num tangents       :  7032
+		num uvs            :  3516
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1194
+	processing begun of mesh:  Picture_1
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_2
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_3
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_4
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_5
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  217
+		num normals        :  217
+		num tangents       :  0
+		num uvs            :  434
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  Picture_6
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_7
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_8
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Picture_9
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  255
+		num normals        :  255
+		num tangents       :  0
+		num uvs            :  510
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Curtain_Rail
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  309
+		num normals        :  309
+		num tangents       :  0
+		num uvs            :  618
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  124
+	processing begun of mesh:  Curtain_2
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  512
+		num normals        :  512
+		num tangents       :  0
+		num uvs            :  1024
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  930
+	processing begun of mesh:  Curtain_1
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  512
+		num normals        :  512
+		num tangents       :  0
+		num uvs            :  1024
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  930
+	processing begun of mesh:  Book_1
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_2
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_3
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_4
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_5
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_6
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_7
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_8
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_9
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Book_10
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  203
+		num normals        :  203
+		num tangents       :  0
+		num uvs            :  406
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  192
+		WARNING: # of 0 area faces found:  4
+	processing begun of mesh:  Statue
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  2965
+		num normals        :  2965
+		num tangents       :  0
+		num uvs            :  5930
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  996
+	processing begun of mesh:  Couch
+		processing begun of material:  Architecture
+		registered as also a user of material:  Architecture
+		num positions      :  8339
+		num normals        :  8339
+		num tangents       :  0
+		num uvs            :  16678
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12862
+	processing begun of mesh:  Wand_C
+		processing begun of material:  Wand_C
+			processing texture Wand_C
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Wand_D
+		processing begun of material:  Wand_D
+			processing texture Wand_D
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Wand_A
+		processing begun of material:  Wand_A
+			processing texture Wand_A
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  10
+		num normals        :  10
+		num tangents       :  0
+		num uvs            :  20
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  Wand_B
+		processing begun of material:  Wand_B
+			processing texture Wand_B
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  10
+		num normals        :  10
+		num tangents       :  0
+		num uvs            :  20
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+========= Writing of JSON file started =========
+	writing mesh:  Floor
+	writing mesh:  Doorway_2
+	writing mesh:  Doorway_1
+	writing mesh:  Chair_1
+	writing mesh:  Sideboard
+	writing mesh:  Rug
+	writing mesh:  Chair_2
+	writing mesh:  Picture_1
+	writing mesh:  Picture_2
+	writing mesh:  Picture_3
+	writing mesh:  Picture_4
+	writing mesh:  Picture_5
+	writing mesh:  Picture_6
+	writing mesh:  Picture_7
+	writing mesh:  Picture_8
+	writing mesh:  Picture_9
+	writing mesh:  Curtain_Rail
+	writing mesh:  Curtain_2
+	writing mesh:  Curtain_1
+	writing mesh:  Book_1
+	writing mesh:  Book_2
+	writing mesh:  Book_3
+	writing mesh:  Book_4
+	writing mesh:  Book_5
+	writing mesh:  Book_6
+	writing mesh:  Book_7
+	writing mesh:  Book_8
+	writing mesh:  Book_9
+	writing mesh:  Book_10
+	writing mesh:  Statue
+	writing mesh:  Couch
+	writing mesh:  Wand_C
+	writing mesh:  Wand_D
+	writing mesh:  Wand_A
+	writing mesh:  Wand_B
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.5711 secs
